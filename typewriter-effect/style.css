@@ -1,0 +1,46 @@
+:root {
+    --main-blue: #1FFFD7;
+    --main-black: #222;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-black);
+}
+
+.container{ 
+    display: inline-block;
+    font-size: 1.75rem;
+    color: var(--main-blue);
+    letter-spacing: 0.3rem;
+}
+
+.typewriter-effect {
+    border-right: 0.15rem solid var(--main-blue);
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        blinking 0.8s infinite,
+        typing 1.25s steps(25, end) forwards;
+}
+
+@keyframes blinking {
+    from {border-color: transparent;}
+    50% {border-color: var(--main-blue);}
+    to {border-color: transparent;}
+}
+
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
